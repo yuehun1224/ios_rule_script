@@ -1,0 +1,11 @@
+#!name=去除工行登陆广告弹窗
+#!desc=热心网友
+#!category=去广告
+
+
+[Rule]
+DOMAIN,pageviewp.icbc.com.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,mall.icbc.com.cn,REJECT,extended-matching,pre-matching
+
+[MITM]
+hostname = %APPEND% image.mybank.icbc.com.cn
